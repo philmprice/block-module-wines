@@ -8,6 +8,9 @@ class IndexControllerCore extends \Host\Controller\BaseController
 {
     public function indexAction()
     {
+    	//	init
+    	$this->init();
+    	
     	//	set vars
     	$this->view->userArray = User::find();
 

@@ -20,11 +20,11 @@ $router->add("/users/", $indexControllerData);
 ////////////////////////////
 //  CLASSES
 
-$loaderClassArray[$blockNamespace.'\Controller\IndexControllerCore']	= ABS_ROOT.'__core__/'.$blockAuthor.'/'.$blockFolder.'/controllers/IndexControllerCore.php';
-$loaderClassArray[$blockNamespace.'\Controller\IndexController']		= ABS_ROOT.'project/' .$blockAuthor.'/'.$blockFolder.'/controllers/IndexController.php';
+$loaderClassArray[$blockNamespace.'\Controller\IndexControllerCore']	= ABS_ROOT.CORE_FOLDER.'/'.$blockAuthor.'/'.$blockFolder.'/controllers/IndexControllerCore.php';
+$loaderClassArray[$blockNamespace.'\Controller\IndexController']		= ABS_ROOT.PROJ_FOLDER.'/'.$blockAuthor.'/'.$blockFolder.'/controllers/IndexController.php';
 
-$loaderClassArray['Model\UserCore']										= ABS_ROOT.'__core__/'.$blockAuthor.'/'.$blockFolder.'/models/UserCore.php';
-$loaderClassArray['Model\User']											= ABS_ROOT.'project/' .$blockAuthor.'/'.$blockFolder.'/models/User.php';
+$loaderClassArray['Model\UserCore']										= ABS_ROOT.CORE_FOLDER.'/'.$blockAuthor.'/'.$blockFolder.'/models/UserCore.php';
+$loaderClassArray['Model\User']											= ABS_ROOT.PROJ_FOLDER.'/'.$blockAuthor.'/'.$blockFolder.'/models/User.php';
 
 ////////////////////////////
 //  AUTOLOAD FOLDERS
