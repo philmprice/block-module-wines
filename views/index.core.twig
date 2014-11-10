@@ -1,0 +1,18 @@
+block-module-users
+
+{% block header %}
+	<p>header</p>
+{% endblock %}
+
+{% block content %}
+	<p>
+		<b>All users:</b><br>
+		{% for user in userArray %}
+			{{ user.firstName }} {{ user.lastName }}<br>
+		{% endfor %}
+	</p>
+{% endblock %}
+
+{% block footer %}
+	<p>footer</p>
+{% endblock %}
