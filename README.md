@@ -1,4 +1,4 @@
-Block: Pages Module
+Block: Users Module
 ====================
 This is the users module for the 'Blocks' system. It drives management and authentication of users.
 
