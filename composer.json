@@ -13,9 +13,9 @@
         }
     ],
     "minimum-stability" : "dev",
-    "require": {
+    "require-dev": {
         "php": ">=5.3.0",
-        "philmprice/block-host": "dev-master"
+        "philmprice/block-host": "*"
     },
     "autoload": {
         "psr-0": {
