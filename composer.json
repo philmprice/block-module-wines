@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "philmprice/block-host": "0.1.*"
+        "philmprice/block-host": "dev-master"
     },
     "autoload": {
         "psr-0": {
