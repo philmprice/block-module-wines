@@ -1,8 +1,8 @@
 <?php
 
-namespace UsersModule\Controller;
+namespace WinesModule\Controller;
 
-use \Model\User as User;
+use \Model\Wine as Wine;
 
 class IndexControllerCore extends \Host\Controller\BaseController
 {
@@ -12,9 +12,9 @@ class IndexControllerCore extends \Host\Controller\BaseController
     	$this->init();
     	
     	//	set vars
-    	$this->view->userArray = User::find();
+    	$this->view->wineArray = Wine::find();
 
 		//	set main view
-		$this->view->setMainView('block-module-users/index');
+		$this->view->setMainView('block-module-wines/index');
     }
 }
