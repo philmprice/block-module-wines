@@ -1,0 +1,30 @@
+{% extends 'core/block-module-wines/admin.core.twig' %}
+
+{% block panelHeading %}
+	<div class='panel-heading'>
+		<h4>Wines</h4>
+	</div>
+{% endblock %}
+
+{% block panelBody %}
+{% endblock %}
+
+{% block table %}
+	<table class='table'>
+		<tr>
+			<th>Name</td>
+			<th>Winery</td>
+			<th></td>
+		</tr>
+		{% for wine in wineArray %}
+			<tr>
+				<td>{{ wine.name }}</td>
+				<td>{{ wine.winery }}</td>
+				<td width=55>
+					<a href='update/{{ wine.handle }}'><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href='delete/{{ wine.handle }}'><span class="glyphicon glyphicon-trash"></span></a>
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
