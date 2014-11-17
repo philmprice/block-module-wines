@@ -2,7 +2,14 @@
 
 {% block panelHeading %}
 	<div class='panel-heading'>
-		<h4>Wines</h4>
+		<div class='row'>
+			<div class='col-xs-6'>
+				<h4>Wines</h4>
+			</div>
+			<div class='col-xs-6 right pad-top'>
+				<a href='create/'><span class="glyphicon glyphicon-plus"></span></a>
+			</div>
+		</div>
 	</div>
 {% endblock %}
 
@@ -10,21 +17,33 @@
 {% endblock %}
 
 {% block table %}
-	<table class='table'>
-		<tr>
-			<th>Name</td>
-			<th>Winery</td>
-			<th></td>
-		</tr>
+	<table class='table table-hover'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Winery</th>
+				<th>Year</th>
+				<th>Updated</th>
+				{% block projectTableHead %}
+				{% endblock %}
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
 		{% for wine in wineArray %}
 			<tr>
 				<td>{{ wine.name }}</td>
 				<td>{{ wine.winery }}</td>
+				<td>{{ wine.year }}</td>
+				<td>{{ wine.dateUpdated|date('M j \'y') }}</td>
+				{% block projectTableData %}
+				{% endblock %}
 				<td width=55>
-					<a href='update/{{ wine.handle }}'><span class="glyphicon glyphicon-pencil"></span></a>
-					<a href='delete/{{ wine.handle }}'><span class="glyphicon glyphicon-trash"></span></a>
+					<a href='update/{{ wine.id }}'><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href='delete/{{ wine.id }}'><span class="glyphicon glyphicon-trash"></span></a>
 				</td>
 			</tr>
 		{% endfor %}
+		</tbody>
 	</table>
 {% endblock %}

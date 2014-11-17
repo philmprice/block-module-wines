@@ -1,0 +1,18 @@
+{% extends 'block-module-wines/public.twig' %}
+
+{% block body %}
+	{% block header %}
+		<h4>Wines</h4>
+	{% endblock %}
+	{% block table %}
+		<table class='table'>
+		{% for wine in wineArray %}
+			<tr>
+				<td>{{ wine.winery }} {{ wine.name }} ({{ wine.year }})</td>
+				{% block projectTableData %}
+				{% endblock %}
+			</tr>
+		{% endfor %}
+		</table>
+	{% endblock %}
+{% endblock %}

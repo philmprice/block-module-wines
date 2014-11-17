@@ -1,24 +1,36 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="{{ root }}css/core/block-plugin-twitter-bootstrap/bootstrap.min.css" type="text/css" />
-		<link rel="stylesheet" href="{{ root }}css/core/block-plugin-twitter-bootstrap/bootstrap-responsive-min.css" type="text/css" />
-	</head>
-	<body>
-		{% block header %}
-			<p>header</p>
-		{% endblock %}
+{% extends 'block-module-sites/public.twig' %}
 
-		{% block content %}
-			<p>
-				<b>All wines:</b><br>
-				{% for wine in wineArray %}
-					{{ wine.year }} {{ wine.name }} {{ wine.winery }}<br>
-				{% endfor %}
-			</p>
+{% block body %}
+	<div class='panel panel-default'>
+		{% block panelHeading %}
+			<!--
+			<div class='panel-heading'>
+				...
+			</div>
+			-->
 		{% endblock %}
-
-		{% block footer %}
-			<p>footer</p>
+		{% block table %}
+			<!--
+			<table class='table'>
+				<tr>
+					<td>...</td>
+				</tr>
+			</table>
+			-->
 		{% endblock %}
-	</body>
-</html>
+		{% block panelBody %}
+			<!--
+			<div class='panel-body'>
+				...
+			</div>
+			-->
+		{% endblock %}
+		{% block panelFooter %}
+		<!--
+		<div class='panel-footer'>
+			...
+		</div>
+		-->
+		{% endblock %}
+	</div>
+{% endblock %}

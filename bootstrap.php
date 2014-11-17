@@ -33,8 +33,8 @@ $indexControllerData = array(
     'action'        => 'update',
     'namespace'     => $blockNamespace.'\Controller'
 );
-$router->add("/admin/".$blockHandle."/update/{handle}",     $indexControllerData);
-$router->add("/admin/".$blockHandle."/update/{handle}/",    $indexControllerData);
+$router->add("/admin/".$blockHandle."/update/{id}",         $indexControllerData);
+$router->add("/admin/".$blockHandle."/update/{id}/",        $indexControllerData);
 
 //  delete
 $indexControllerData = array(
@@ -42,8 +42,8 @@ $indexControllerData = array(
     'action'        => 'delete',
     'namespace'     => $blockNamespace.'\Controller'
 );
-$router->add("/admin/".$blockHandle."/delete/{handle}",     $indexControllerData);
-$router->add("/admin/".$blockHandle."/delete/{handle}/",    $indexControllerData);
+$router->add("/admin/".$blockHandle."/delete/{id}",         $indexControllerData);
+$router->add("/admin/".$blockHandle."/delete/{id}/",        $indexControllerData);
 
 // public website
 $indexControllerData = array(
